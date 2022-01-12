@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 withKubeConfig([credentialsId: 'kubeconfig']) {
-                    sh 'helm upgrade --install myapp helm/helm-chart-node/ -n app -f helm/values.yml'
+                    sh "helm upgrade --install myapp helm/helm-chart-node/ -n app -f helm/values.yml --set build=${currentBuild.number}"
                 }
             }
         }
