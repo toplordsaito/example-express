@@ -31,7 +31,7 @@ spec:
     }
 
     environment {
-        ENV_NAME = "${BRANCH_NAME == 'main' ? 'uat' : "${BRANCH_NAME}"}"
+        ENV_NAME = "${BRANCH_NAME}"
         SCANNER_HOME = tool 'sonarqube-scanner'
         PROJECT_KEY = 'chomchob-app'
         PROJECT_NAME = 'chomchob-app'
