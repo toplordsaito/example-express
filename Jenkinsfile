@@ -89,7 +89,7 @@ spec:
                 container('helm') {
                     script {
                         withKubeConfig([credentialsId: 'kubeconfig']) {
-                            sh "helm upgrade --install myapp helm/helm-chart-node/ -n ${ENV_NAME} -f helm/values.yml --set image.tag=${TAG_IMAGE}"
+                            sh "helm upgrade --install myapp helm/helm-chart-node/ -n ${ENV_NAME} -f helm/values/values-${ENV_NAME}.yml --set image.tag=${TAG_IMAGE}"
                         }
                     }
                 }
