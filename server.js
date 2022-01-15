@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(customAuthMiddleware);
 
 const db = require("./app/models");
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   console.log("Drop and re-sync db.");
 });
 
