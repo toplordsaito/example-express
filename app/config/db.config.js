@@ -1,9 +1,9 @@
 module.exports = {
   HOST: process.env.DATABASE_HOST,
-  USER: process.envDATABASE_USER,
-  PASSWORD: process.envDATABASE_PASSWORD,
-  DB: process.envDATABASE,
-  dialect: process.envDATABASE_TYPE,
+  USER: process.env.DATABASE_USER,
+  PASSWORD: process.env.DATABASE_PASSWORD,
+  DB: process.env.DATABASE,
+  dialect: process.env.DATABASE_TYPE,
   pool: {
     max: 5,
     min: 0,

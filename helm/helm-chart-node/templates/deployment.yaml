@@ -49,7 +49,16 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.envs }}
           env:
-            {{- toYaml . | nindent 8 }}
+            - name: DATABASE_HOST
+              value: {{ .DATABASE_HOST }}
+            - name: DATABASE_USER
+              value: {{ .DATABASE_USER }}
+            - name: DATABASE_PASSWORD
+              value: {{ .DATABASE_PASSWORD }}
+            - name: DATABASE
+              value: {{ .DATABASE }}
+            - name: DATABASE_TYPE
+              value: {{ .DATABASE_TYPE }}
           {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
