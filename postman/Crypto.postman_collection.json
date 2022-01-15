@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "f8ec226b-9c0e-4ed6-9100-271f88a82f9e",
+		"name": "Crypto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllCrypto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cryptos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cryptos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCryptoByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cryptos/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cryptos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCryptoByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cryptos/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cryptos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAllCrypto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/cryptos/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cryptos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCryptoByID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 213456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/cryptos/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cryptos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCrypto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"BTC\",\r\n    \"value\": 123456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/cryptos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"cryptos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

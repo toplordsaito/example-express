@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "3587015c-dd86-4075-9e17-25c398922b0a",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllWallet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/wallets",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetWalletByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/wallets/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteWalletByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/wallets/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAllWallet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/wallets/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateWalletByID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 213456\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/wallets/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateWallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"BTC\",\r\n    \"balance\": 3,\r\n    \"UserId\": 1,\r\n    \"cryptoId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/wallets",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TranferWallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dest\": { \r\n        \"walletId\": 2\r\n    },\r\n    \"source\": {\r\n        \"walletId\": 1\r\n    },\r\n    \"amount\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/wallets/tranfer",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"wallets",
+						"tranfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
