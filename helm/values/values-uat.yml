@@ -86,5 +86,5 @@ envs:
   DATABASE_HOST: mariadb.datastore
   DATABASE_USER: root
   DATABASE_PASSWORD: root1234
-  DATABASE: "dev-db"
+  DATABASE: "uat-db"
   DATABASE_TYPE: "mariadb"
